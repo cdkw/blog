@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on cdkwblog</title>
-    <link>http://localhost:1313/blog/posts/</link>
-    <description>Recent content in Posts on cdkwblog</description>
+    <title>Posts on cdkw&#39;s blog</title>
+    <link>https://cdkw.github.io/blog/posts/</link>
+    <description>Recent content in Posts on cdkw&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Mar 2025 23:42:46 +0200</lastBuildDate><atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Mar 2025 23:42:46 +0200</lastBuildDate><atom:link href="https://cdkw.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test test setes tse</title>
-      <link>http://localhost:1313/blog/posts/test/</link>
+      <title>Hello world</title>
+      <link>https://cdkw.github.io/blog/posts/test/</link>
       <pubDate>Tue, 18 Mar 2025 23:42:46 +0200</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/test/</guid>
+      <guid>https://cdkw.github.io/blog/posts/test/</guid>
       
-      <description>&lt;p&gt;Ceva ceva&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jsquery 123
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;p&gt;I finally created my blog&lt;/p&gt;</description>
       
     </item>
     
