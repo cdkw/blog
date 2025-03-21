@@ -1,9 +1,9 @@
 {
-    "name": "sitename",
-    "short_name": "sitename",
-    "start_url": "/",
+    "name": "cdkw's blog",
+    "short_name": "cdkw's blog",
+    "start_url": "https://cdkw.github.io/blog/",
     "theme_color": "#434648",
-    "background_color": "#fff",
+    "background_color": "#131418",
     "display": "standalone",
     "icons": [
         {
