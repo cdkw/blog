@@ -1,4 +1,4 @@
-# https://cdkwblog.github.io
+# https://cdkw.github.io/blog
 
 ### **☕ Support me!**
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on cdkw&#39;s blog</title>
-    <link>https://cdkw.github.io/blog/posts/</link>
+    <link>http://localhost:1313/blog/posts/</link>
     <description>Recent content in Posts on cdkw&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 18 Mar 2025 23:42:46 +0200</lastBuildDate><atom:link href="https://cdkw.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Mar 2025 23:42:46 +0200</lastBuildDate><atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Backdoors</title>
-      <link>https://cdkw.github.io/blog/posts/helloworld/</link>
+      <link>http://localhost:1313/blog/posts/helloworld/</link>
       <pubDate>Tue, 18 Mar 2025 23:42:46 +0200</pubDate>
       
-      <guid>https://cdkw.github.io/blog/posts/helloworld/</guid>
+      <guid>http://localhost:1313/blog/posts/helloworld/</guid>
       
       <description>&lt;p&gt;Still in work here&lt;/p&gt;</description>
       
