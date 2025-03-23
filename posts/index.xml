@@ -22,7 +22,7 @@
 • Subnetting
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;-ip-addresses---layer-3-in-the-osi-model&#34;&gt;• IP Addresses - &lt;code&gt;LAYER 3&lt;/code&gt; (in the OSI model)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;ifconfig.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/posts/networking/ifconfig.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;-ipv4-&#34;&gt;=&amp;mdash;&amp;mdash;&amp;ndash; IPv4 &amp;mdash;&amp;mdash;&amp;ndash;=&lt;/h3&gt;
 &lt;p&gt;*&lt;code&gt;inet&lt;/code&gt; =&amp;gt; IPv4 (decimal notation &lt;code&gt;x.x.x.x&lt;/code&gt; from &lt;code&gt;1&amp;lt;=x&amp;lt;=255&lt;/code&gt;)
 where &lt;code&gt;x&lt;/code&gt; has 8 bits, so an IP address in binary looks like &lt;code&gt;00100100.10100011.00100100.10100011&lt;/code&gt; (&lt;code&gt;8bits = 1byte&lt;/code&gt;, so an IPv4 address is &lt;code&gt;4bytes&lt;/code&gt;)&lt;/p&gt;</description>
