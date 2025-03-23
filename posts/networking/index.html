@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Quick introduction on Networking | cdkw&#39;s blog</title>
+<meta property="og:title" content="Quick introduction on Networking | cdkw&#39;s blog" />
+<meta name="twitter:title" content="Quick introduction on Networking | cdkw&#39;s blog" />
+<meta itemprop="name" content="Quick introduction on Networking | cdkw&#39;s blog" />
+<meta name="application-name" content="Quick introduction on Networking | cdkw&#39;s blog" />
+<meta property="og:site_name" content="cdkw&#39;s blog" />
+
+<meta name="description" content="Minimal Hugo blog">
+<meta itemprop="description" content="Minimal Hugo blog" />
+<meta property="og:description" content="Minimal Hugo blog" />
+<meta name="twitter:description" content="Minimal Hugo blog" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/blog/posts/networking/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-03-18T23:42:46&#43;0200 />
+    <meta property="article:published_time" content=2025-03-18T23:42:46&#43;0200 />
+    <meta property="og:url" content="http://localhost:1313/blog/posts/networking/" />
+
+    
+    <meta property="og:article:author" content="cdkw" />
+    <meta property="article:author" content="cdkw" />
+    <meta name="author" content="cdkw" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Quick introduction on Networking",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-03-18",
+        "description": "",
+        "wordCount":  816 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-03-18",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "cdkw\u0027s blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+    
+    <meta property="og:url" content="http://localhost:1313/blog/posts/networking/">
+  <meta property="og:site_name" content="cdkw&#39;s blog">
+  <meta property="og:title" content="Quick introduction on Networking">
+  <meta property="og:description" content="• IP Addresses • MAC Addresses • TCP, UDP, and the Three-Way Handshake • Common Ports and Protocols • The OSI Model • Subnetting • IP Addresses - LAYER 3 (in the OSI model) =——– IPv4 ——–= *inet =&gt; IPv4 (decimal notation x.x.x.x from 1&lt;=x&lt;=255) where x has 8 bits, so an IP address in binary looks like 00100100.10100011.00100100.10100011 (8bits = 1byte, so an IPv4 address is 4bytes)">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-18T23:42:46+02:00">
+    <meta property="article:modified_time" content="2025-03-18T23:42:46+02:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quick introduction on Networking">
+  <meta name="twitter:description" content="• IP Addresses • MAC Addresses • TCP, UDP, and the Three-Way Handshake • Common Ports and Protocols • The OSI Model • Subnetting • IP Addresses - LAYER 3 (in the OSI model) =——– IPv4 ——–= *inet =&gt; IPv4 (decimal notation x.x.x.x from 1&lt;=x&lt;=255) where x has 8 bits, so an IP address in binary looks like 00100100.10100011.00100100.10100011 (8bits = 1byte, so an IPv4 address is 4bytes)">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/blog/posts/networking/">
+    <link href="/blog/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/blog/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/blog/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/blog/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Quick introduction on Networking</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-03-18T23:42:46&#43;02:00" itemprop="datePublished"> 18 Mar 2025 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-ip-addresses---layer-3-in-the-osi-model">• IP Addresses - <code>LAYER 3</code> (in the OSI model)</a></li>
+        <li><a href="#-ipv4-">=&mdash;&mdash;&ndash; IPv4 &mdash;&mdash;&ndash;=</a></li>
+      </ul>
+    </li>
+    <li><a href="#private-ip-addreses">PRIVATE IP ADDRESES</a>
+      <ul>
+        <li><a href="#-ipv6-">=&mdash;&mdash;&ndash; IPv6 &mdash;&mdash;&ndash;=</a></li>
+        <li><a href="#-mac-addresses---layer-2-in-the-osi-model">• MAC Addresses - <code>LAYER 2</code> (in the OSI model)</a></li>
+        <li><a href="#-tcpudp---layer-4-transport-layer-in-the-osi-model">• TCP/UDP - <code>LAYER 4</code> (transport layer in the OSI model)</a></li>
+        <li><a href="#three-way-handshake">Three-way handshake</a></li>
+        <li><a href="#-common-ports-and-protocols">• Common ports and protocols</a></li>
+      </ul>
+    </li>
+    <li><a href="#tcp">TCP</a></li>
+    <li><a href="#udp">UDP</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-subnetting-important">• Subnetting (<code>important!</code>)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#if-you-do-not-have-the-cyber-mentors-subnetting-sheet-with-you-an-easy-way-to-know-the-number-of-hosts-if-a-cidr-number-is-given-is-to">If you do not have the Cyber Mentor&rsquo;s Subnetting Sheet with you, an easy way to know the number of hosts if a CIDR number is given is to:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <pre><code>• IP Addresses
+• MAC Addresses
+• TCP, UDP, and the Three-Way Handshake
+• Common Ports and Protocols
+• The OSI Model
+• Subnetting
+</code></pre>
+<h3 id="-ip-addresses---layer-3-in-the-osi-model">• IP Addresses - <code>LAYER 3</code> (in the OSI model)</h3>
+<p><img src="ifconfig.png" alt="ifconfig"></p>
+<h3 id="-ipv4-">=&mdash;&mdash;&ndash; IPv4 &mdash;&mdash;&ndash;=</h3>
+<p>*<code>inet</code> =&gt; IPv4 (decimal notation <code>x.x.x.x</code> from <code>1&lt;=x&lt;=255</code>)
+where <code>x</code> has 8 bits, so an IP address in binary looks like <code>00100100.10100011.00100100.10100011</code> (<code>8bits = 1byte</code>, so an IPv4 address is <code>4bytes</code>)</p>
+<ul>
+<li>How binary works:
+<code>128 64 32 16 8 4 2 1</code>
+<code> 1   1  1  1 1 1 1 1</code>    =   255</li>
+</ul>
+<p><code>NAT</code> (<code>Network address translation</code>):</p>
+<ul>
+<li>It assigns <code>Private IP Addreses</code>, and only the router has that <code>Public IP Address</code>, got from the ISP. Private IP Addresses begin usually look something like <code>192.168.0.x</code>, <code>10.0.0.x</code>, <code>127.16.x.x</code>-<code>127.31.x.x</code>.</li>
+</ul>
+<h2 id="private-ip-addreses">PRIVATE IP ADDRESES</h2>
+<p><img src="networkclasses.png" alt="networkclasses"></p>
+<h3 id="-ipv6-">=&mdash;&mdash;&ndash; IPv6 &mdash;&mdash;&ndash;=</h3>
+<p>*<code>inet6</code> =&gt; IPv6 (hexadecimal notation <code>fe80::x:x:x:x</code> from <code>0000 &lt;= x &lt;= ffff</code> in hexadecimal notation)</p>
+<p>IPv6 was invented because there are <code>too many IPv4 addresses</code>, 2^32 ~= 4.3 billion, where there are ~8 billion people on the Earth.
+So it was invented to make the more space, because 2^128 is a big number. But it ended up not being used because of <code>NAT</code> (<code>Network address translation</code>)</p>
+<h3 id="-mac-addresses---layer-2-in-the-osi-model">• MAC Addresses - <code>LAYER 2</code> (in the OSI model)</h3>
+<p><img src="ifconfig.png" alt="ifconfig"></p>
+<p>MAC (<code>ether</code>) stands for <code>Media Access Control</code> - a &ldquo;physical address&rdquo;, a way to communicate if using <code>switches</code>. Every <code>NIC</code> (Network Interface Card) has a MAC address (EX: your phone).</p>
+<p>FORMAT: <code>00:00:00:00:00:00</code> - <code>ff:ff:ff:ff:ff:ff</code></p>
+<p>They have identifiers, you can use the first 3 pairs (EX: <code>00:0c:29...</code> ) to identify a device:
+<a href="https://dnschecker.org/mac-lookup.php">https://dnschecker.org/mac-lookup.php</a> and it will end up showing <code>VMWare, Inc.</code>.</p>
+<p>A modern router is a <code>L2</code> and <code>L3</code> device, meaning it&rsquo;s doing <code>switching</code> and <code>routing</code> for you. So that means it might know the MAC Address</p>
+<h3 id="-tcpudp---layer-4-transport-layer-in-the-osi-model">• TCP/UDP - <code>LAYER 4</code> (transport layer in the OSI model)</h3>
+<p><strong>UDP</strong> - User Datagram Protocol (Streaming service, VoIP, DNS, &hellip;)</p>
+<p><strong>TCP</strong> - Transition Control Protocol (connection oriented):</p>
+<ul>
+<li><code>high reliability</code></li>
+<li><code>three way handshake</code> (EX: How you connect to a port on a machine)</li>
+</ul>
+<p><code>SYN</code> &gt;   (Hello!)
+<code>SYN ACK</code> &lt;     (Hello back!)
+<code>ACK</code> &lt;     (acknowledgement)</p>
+<h3 id="three-way-handshake">Three-way handshake</h3>
+<p><img src="TCP-three-way-handshake.png" alt="TCP-three-way-handshake">
+You can scan in <code>nmap</code> with a three-way handshake using the <code>-sT</code> parameter.</p>
+<h3 id="-common-ports-and-protocols">• Common ports and protocols</h3>
+<h2 id="tcp">TCP</h2>
+<p>• FTP (21)   -   File Transfer Protocol
+• Telnet (23)  -   Log into a machine remotely
+• SSH (22)   -   Telnet but encrypted
+• SMTP (25)  -   Mail
+• IMAP (143)  -   Mail
+• POP3 (110)  -   Mail
+• DNS (53)  -   Resolve IP Addresses to names (Domain Name System)
+• HTTP (80) / HTTPS (443 - encrypted)  -   Website
+• SMB (139 + 445)  -   File shares (Samba, in Windows)
+• MySQL (3306)  -  Database</p>
+<h2 id="udp">UDP</h2>
+<p>• DNS (53)  -   Resolve IP Addresses to names
+• DHCP (67, 68)  -   Associates you an IP Address (opposite of static IP)
+• TFTP (69)  -   Trivial FTP
+• SNMP (161)  -   Simple Network Management Protocol</p>
+<h1 id="-the-osi-model">• The OSI Model</h1>
+<p>(<strong>Please Do Not Throw Sausage Pizza Away! 😆</strong>)
+LAYER 1. <code>Physical layer</code>   -   data cables, cat6
+LAYER 2. <code>Data layer</code>   -   switching, MAC addresses
+LAYER 3. <code>Network</code>   -   IP Addresses, routing
+LAYER 4. <code>Transport layer</code>   -   TCP/UDP
+LAYER 5. <code>Session</code>   -   session management
+LAYER 6. <code>Presentation layer</code>   -   WMV, JPEG, MOV
+LAYER 7. <code>Application layer</code>   -   HTTP, SMTP</p>
+<h2 id="-subnetting-important">• Subnetting (<code>important!</code>)</h2>
+<p><strong>netmask = subnet = subnet mask</strong>
+<code>netmask 255.255.255.0</code>  (Just like IPv4, <code>x.x.x.x</code>)
+How <code>255.255.255.0</code> looks in binary <code>11111111.11111111.11111111.00000000</code></p>
+<p><img src="Cybermentor-Spreadsheet.png" alt="Image"></p>
+<p><code>255.255.255.0</code> is a WACK <code>/24</code> network, commonly used in houses and small businesses (256 hosts and 254 usable hosts)
+Bits get turned on from the left to the right &mdash;&gt;</p>
+<p>The <code>/24</code> comes from <code>11111111.11111111.11111111.00000000</code> because there are 24 bits turned on. The bigger the company, the bigger the host number might be, so for example instead of <code>/24</code> a company might have a WACK <code>/16</code>, subnet which looks something like <code>255.255.0.0</code> and an IPv4 example being <code>10.0.1.5</code></p>
+<p>One way to think about it is that the 255 locks a number in place, and a 0 lets it be any number from 0-255:</p>
+<p><code>192.168.110.4</code>
+<code>255.255.255.0</code></p>
+<p>That means there are 256-2=254 hosts possible, and they can have IP Addresses in range <code>192.168.110.1</code>-<code>192.168.110.255</code>.</p>
+<p>We subtract 2 from the final hosts because the network has a:</p>
+<ul>
+<li><code>Broadcast</code> (which is usually the last address. EX: for <code>192.168.0.1/24</code> the <code>broadcast</code> is <code>192.168.0.255</code>)</li>
+<li><code>Network ID</code> (which is usually the first address. EX: for <code>192.168.0.1/24</code> the <code>network id</code> is <code>192.168.0.0</code>)</li>
+</ul>
+<h4 id="if-you-do-not-have-the-cyber-mentors-subnetting-sheet-with-you-an-easy-way-to-know-the-number-of-hosts-if-a-cidr-number-is-given-is-to">If you do not have the Cyber Mentor&rsquo;s Subnetting Sheet with you, an easy way to know the number of hosts if a CIDR number is given is to:</h4>
+<ol>
+<li><strong>Subtract CIDR value from 32 (Example: /24. 32 - 24 = 8)</strong></li>
+<li><strong>Take the difference and use it as power to base 2 (Example: 2^8 = 256)</strong></li>
+<li><strong>Subtract 2 from the result to get your number of hosts (Example: 256 - 2 = 254 number of hosts)</strong></li>
+</ol>
+<p><code>192.168.0.0/22  255.255.252.0    1022  192.168.0.0  192.168.3.255</code>
+<code>192.168.1.0/26  255.255.255.192  62    192.168.1.0  192.168.1.63</code>
+<code>192.168.1.0/27  255.255.255.224  30    192.168.1.0  192.168.1.31</code></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/cdkw" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://x.com/cdkw_" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 cdkw.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/blog/js/main.js" ></script>
+
+    
+
+</body>
+</html>
